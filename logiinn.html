@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center mt-5">
+            <div class="col-md-6">
+                <h2 class="text-center">Login</h2>
+                <form id="loginForm">
+                    <div class="form-group">
+                       <p class="username">username</p>
+                        <input type="text" class="form-control" id="username" name="username" required>
+                    </div>
+
+                    <div class="form-group">
+                        <p class="password">password</p>
+                        <input type="password" class="form-control" id="password" name="password" required>
+                    </div>
+
+                    <button type="button" class="btn btn-primary btn-block" onclick="authenticate()">Log in</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function authenticate() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            if (username === 'islemaouini370' && password === 'islem2222') {
+                window.location.href = 'QR-CODE.html';
+            } else {
+                alert('Invalid username or password. Please try again.');
+            }
+        }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
